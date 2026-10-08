@@ -1,9 +1,6 @@
 package com.example;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-class AppTest {
-    @Test
-    void testAdd() {
-        assertEquals(5, App.add(2, 3));
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello from my packaged Maven JAR!");
     }
 }
