@@ -9,14 +9,14 @@ pipeline {
                 git branch: 'main', url: 'https://github.com'
             }
         }
-        stage('Compile') {
+        stage('Package') {
             steps {
-                bat 'mvn clean compile'
+                bat 'mvn clean package'
             }
         }
-        stage('Test') {
+        stage('Run JAR') {
             steps {
-                bat 'mvn test'
+                bat 'java -cp target\\maven-package-demo-1.0.jar com.example.App'
             }
         }
     }
